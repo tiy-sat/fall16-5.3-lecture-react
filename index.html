@@ -2,10 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script src="dist/bundle.js" charset="utf-8"></script>
     <title></title>
+    <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
-
+    <div id="app"></div>
+    <!-- Because this element has the ID of "app" all of my react code will render inside of this element -->
   </body>
+  <!--
+    Moving our script to the bottom of the page allows a few things...
+      1) HTML will load all visual elements FIRST (before finding JS)
+      2) Ensures all elements have been rendered for our React code
+  -->
+  <script src="dist/bundle.js" charset="utf-8"></script>
 </html>
